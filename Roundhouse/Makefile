@@ -30,6 +30,20 @@
 # https://wiki.openwrt.org/doc/howto/generic.backup
 # http://mirrors.deepspace6.net/Linux+IPv6-HOWTO/
 # http://www.tldp.org/HOWTO/pdf/Linux+IPv6-HOWTO.pdf
+# http://he.net
+# https://tunnelbroker.net
+
+################################################################################
+
+# ~/.roundhouse:
+
+# SU_PASSWORD=\$$0\$$abCd1E23\$$fGHI45JkLm6No\/pq4stuV6
+# HE_PEERADDR=123.456.789.012
+# HE_IP6ADDR=1234:456:89:012::\/64
+# HE_IP6PREFIX=2345:678:90:123::\/64
+# HE_TUNNELID=123456
+# HE_USERNAME=abcdef
+# HE_PASSWORD=0a1b2c3d4e5f6g7h
 
 ################################################################################
 
