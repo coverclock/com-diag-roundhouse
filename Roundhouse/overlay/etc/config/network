@@ -1,0 +1,37 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option ifname 'eth0'
+	option type 'bridge'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	option ipaddr '192.168.2.1'
+
+config globals 'globals'
+	option ula_prefix 'fd71:9abb:2f8a::/48'
+
+config interface 'wan'
+	option proto 'dhcp'
+	option ifname 'eth1'
+
+config interface 'wan6'
+	option proto 'dhcpv6'
+	option ifname 'eth1'
+	option reqaddress 'try'
+	option reqprefix 'auto'
+
+config interface 'henet'
+	option proto '6in4'
+	option peeraddr 'PEERADDR'
+	option ip6addr 'IP6ADDR'
+	option ip6prefix 'IP6PREFIX'
+	option tunnelid 'TUNNELID'
+	option username 'USERNAME'
+	option password 'PASSWORD'
+
