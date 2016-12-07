@@ -1,6 +1,6 @@
 
 config system
-	option hostname 'OpenWrt'
+	option hostname 'roundhouse'
 	option timezone 'UTC'
 
 config timeserver 'ntp'
