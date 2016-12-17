@@ -1,14 +1,14 @@
 
 config interface 'loopback'
-	option ifname 'lo'
 	option proto 'static'
+	option ifname 'lo'
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
 
 config interface 'lan'
+	option proto 'static'
 	option ifname 'eth0'
 	option type 'bridge'
-	option proto 'static'
 	option netmask '255.255.255.0'
 	option ip6assign '60'
 	option ipaddr '192.168.2.1'
@@ -17,8 +17,17 @@ config globals 'globals'
 	option ula_prefix 'fd71:9abb:2f8a::/48'
 
 config interface 'wan'
-	option proto 'dhcp'
+	option proto 'static'
 	option ifname 'eth1'
+	option ipaddr 'RH_IP4ADDR'
+	option netmask 'RH_NETMASK'
+	option dns 'RH_GATEWAY'
+
+config route
+	option interface 'wan'
+	option target '0.0.0.0'
+	option netmask 0.0.0.0
+	option gateway 'RH_GATEWAY'
 
 config interface 'wan6'
 	option proto 'dhcpv6'
@@ -28,10 +37,10 @@ config interface 'wan6'
 
 config interface 'henet'
 	option proto '6in4'
-	option peeraddr 'PEERADDR'
-	option ip6addr 'IP6ADDR'
-	option ip6prefix 'IP6PREFIX'
-	option tunnelid 'TUNNELID'
-	option username 'USERNAME'
-	option password 'PASSWORD'
+	option peeraddr 'HE_PEERADDR'
+	option ip6addr 'HE_IP6ADDR'
+	option ip6prefix 'HE_IP6PREFIX'
+	option tunnelid 'HE_TUNNELID'
+	option username 'HE_USERNAME'
+	option password 'HE_PASSWORD'
 

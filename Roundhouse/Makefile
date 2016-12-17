@@ -37,7 +37,10 @@
 
 # ~/.roundhouse:
 
-# SU_PASSWORD=\$$0\$$abCd1E23\$$fGHI45JkLm6No\/pq4stuV6
+# RH_PASSWORD=\$$0\$$abCd1E23\$$fGHI45JkLm6No\/pq4stuV6
+# RH_IP4ADDR=192.168.1.241
+# RH_NETMASK=255.255.255.0
+# RH_GATEWAY=192.168.1.1
 # HE_PEERADDR=123.456.789.012
 # HE_IP6ADDR=1234:456:89:012::\/64
 # HE_IP6PREFIX=2345:678:90:123::\/64
@@ -157,18 +160,21 @@ include $(HOME)/.$(PROJECT)
 $(BUILD)/overlay/etc/shadow:	overlay/etc/shadow $(HOME)/.$(PROJECT)
 	test -f $@ || ( tar -cvf - overlay | tar -C $(BUILD) -xvf - )
 	sed \
-		-e "/^root:/s/::/:$(SU_PASSWORD):/" \
+		-e "/^root:/s/::/:$(RH_PASSWORD):/" \
 		< $< > $@
 
 $(BUILD)/overlay/etc/config/network:	overlay/etc/config/network $(HOME)/.$(PROJECT)
 	test -f $@ || ( tar -cvf - overlay | tar -C $(BUILD) -xvf - )
 	sed \
-		-e "s/PEERADDR/$(HE_PEERADDR)/" \
-		-e "s/IP6ADDR/$(HE_IP6ADDR)/" \
-		-e "s/IP6PREFIX/$(HE_IP6PREFIX)/" \
-		-e "s/TUNNELID/$(HE_TUNNELID)/" \
-		-e "s/USERNAME/$(HE_USERNAME)/" \
-		-e "s/PASSWORD/$(HE_PASSWORD)/" \
+		-e "s/RH_IP4ADDR/$(RH_IP4ADDR)/" \
+		-e "s/RH_NETMASK/$(RH_NETMASK)/" \
+		-e "s/RH_GATEWAY/$(RH_GATEWAY)/" \
+		-e "s/HE_PEERADDR/$(HE_PEERADDR)/" \
+		-e "s/HE_IP6ADDR/$(HE_IP6ADDR)/" \
+		-e "s/HE_IP6PREFIX/$(HE_IP6PREFIX)/" \
+		-e "s/HE_TUNNELID/$(HE_TUNNELID)/" \
+		-e "s/HE_USERNAME/$(HE_USERNAME)/" \
+		-e "s/HE_PASSWORD/$(HE_PASSWORD)/" \
 		< $< > $@
 
 overlay-generate:	$(BUILD)/overlay/etc/shadow $(BUILD)/overlay/etc/config/network
