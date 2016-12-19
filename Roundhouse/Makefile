@@ -102,6 +102,7 @@ PACKAGES+=luci-lib-ip
 PACKAGES+=luci-lib-nixio
 PACKAGES+=chat
 PACKAGES+=comgt
+PACKAGES+=tcpdump
 
 PLATFORM:=$(ARCH)_$(CORE)_uClibc-$(UCLIBC)
 TOOLCHAIN:=$(ARCH)_$(CORE)_gcc-$(GCC)_uClibc-$(UCLIBC)

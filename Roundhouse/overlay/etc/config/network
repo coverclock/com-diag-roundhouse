@@ -29,12 +29,6 @@ config route
 	option netmask 0.0.0.0
 	option gateway 'RH_GATEWAY'
 
-config interface 'wan6'
-	option proto 'dhcpv6'
-	option ifname 'eth1'
-	option reqaddress 'try'
-	option reqprefix 'auto'
-
 config interface 'henet'
 	option proto '6in4'
 	option peeraddr 'HE_PEERADDR'

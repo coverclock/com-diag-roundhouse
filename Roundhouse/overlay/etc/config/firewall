@@ -3,25 +3,23 @@ config defaults
 	option syn_flood '1'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'ACCEPT'
+	option forward 'REJECT'
 
 config zone
 	option name 'lan'
 	list network 'lan'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'ACCEPT'
-	option masq '1'
-	option mtu_fix '1'
+	option forward 'REJECT'
 
 config zone
 	option name 'wan'
 	option output 'ACCEPT'
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option network 'wan henet'
 	option masq '1'
 	option mtu_fix '1'
-	option input 'ACCEPT'
-	option forward 'ACCEPT'
-	option network 'wan henet'
 
 config rule
 	option name 'Allow-DHCP-Renew'
@@ -121,10 +119,6 @@ config rule
 	option target 'ACCEPT'
 
 config forwarding
-	option dest 'lan'
-	option src 'wan'
-
-config forwarding
-	option dest 'wan'
 	option src 'lan'
+	option dest 'wan'
 
