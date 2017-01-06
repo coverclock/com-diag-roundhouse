@@ -7,27 +7,27 @@ config interface 'loopback'
 
 config interface 'lan'
 	option proto 'static'
-	option ifname 'eth0'
+	option ifname 'eth1'
 	option type 'bridge'
-	option netmask '255.255.255.0'
+	option ipaddr 'LA_IP4ADDR'
+	option netmask 'LA_NETMASK'
 	option ip6assign '60'
-	option ipaddr '192.168.2.1'
 
 config globals 'globals'
-	option ula_prefix 'fd71:9abb:2f8a::/48'
+	option ula_prefix 'LA_IP6PREFIX'
 
 config interface 'wan'
 	option proto 'static'
-	option ifname 'eth1'
-	option ipaddr 'RH_IP4ADDR'
-	option netmask 'RH_NETMASK'
-	option dns 'RH_GATEWAY'
+	option ifname 'eth0'
+	option ipaddr 'WA_IP4ADDR'
+	option netmask 'WA_NETMASK'
+	option dns 'WA_GATEWAY'
 
 config route
 	option interface 'wan'
 	option target '0.0.0.0'
 	option netmask 0.0.0.0
-	option gateway 'RH_GATEWAY'
+	option gateway 'WA_GATEWAY'
 
 config interface 'henet'
 	option proto '6in4'
