@@ -31,6 +31,7 @@
 
 ################################################################################
 
+# https://en.wikipedia.org/wiki/IPv6_deployment
 # https://github.com/raspberrypi/tools
 # https://github.com/openwrt/openwrt
 # https://downloads.openwrt.org/chaos_calmer/15.05.1/brcm2708/bcm2709/

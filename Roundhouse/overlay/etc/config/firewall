@@ -19,6 +19,19 @@ config zone
 	option forward 'REJECT'
 	option network 'wan'
 
+config zone
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option name 'wan6'
+	option network 'wan6'
+	option conntrack '1'
+
+config rule
+	option src 'wan'
+	option proto '41'
+	option target 'ACCEPT'
+
 config rule
 	option name 'Allow-DHCP-Renew'
 	option src 'wan'
@@ -44,7 +57,7 @@ config rule
 
 config rule
 	option name 'Allow-DHCPv6'
-	option src 'wan'
+	option src 'wan6'
 	option proto 'udp'
 	option src_ip 'fe80::/10'
 	option src_port '547'
@@ -55,7 +68,7 @@ config rule
 
 config rule
 	option name 'Allow-MLD'
-	option src 'wan'
+	option src 'wan6'
 	option proto 'icmp'
 	option src_ip 'fe80::/10'
 	list icmp_type '130/0'
@@ -67,7 +80,7 @@ config rule
 
 config rule
 	option name 'Allow-ICMPv6-Input'
-	option src 'wan'
+	option src 'wan6'
 	option proto 'icmp'
 	list icmp_type 'echo-request'
 	list icmp_type 'echo-reply'
@@ -86,7 +99,7 @@ config rule
 
 config rule
 	option name 'Allow-ICMPv6-Forward'
-	option src 'wan'
+	option src 'wan6'
 	option dest '*'
 	option proto 'icmp'
 	list icmp_type 'echo-request'
@@ -119,13 +132,6 @@ config rule
 config forwarding
 	option dest 'wan'
 	option src 'lan'
-
-config zone
-	option input 'ACCEPT'
-	option forward 'REJECT'
-	option output 'ACCEPT'
-	option name 'wan6'
-	option network 'henet'
 
 config forwarding
 	option dest 'wan6'

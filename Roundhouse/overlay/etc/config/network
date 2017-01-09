@@ -29,7 +29,7 @@ config route
 	option netmask 0.0.0.0
 	option gateway 'WA_GATEWAY'
 
-config interface 'henet'
+config interface 'wan6'
 	option proto '6in4'
 	option peeraddr 'HE_PEERADDR'
 	option ip6addr 'HE_IP6ADDR'
