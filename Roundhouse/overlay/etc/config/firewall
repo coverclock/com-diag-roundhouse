@@ -7,19 +7,17 @@ config defaults
 
 config zone
 	option name 'lan'
-	list network 'lan'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'REJECT'
+	option network 'lan'
 
 config zone
 	option name 'wan'
 	option output 'ACCEPT'
 	option input 'ACCEPT'
 	option forward 'REJECT'
-	option network 'wan henet'
-	option masq '1'
-	option mtu_fix '1'
+	option network 'wan'
 
 config rule
 	option name 'Allow-DHCP-Renew'
@@ -119,6 +117,17 @@ config rule
 	option target 'ACCEPT'
 
 config forwarding
-	option src 'lan'
 	option dest 'wan'
+	option src 'lan'
+
+config zone
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option name 'wan6'
+	option network 'henet'
+
+config forwarding
+	option dest 'wan6'
+	option src 'lan'
 
