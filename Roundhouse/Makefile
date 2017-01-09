@@ -81,6 +81,19 @@
 
 ################################################################################
 
+# Example overlay/etc/config/firewall rule to forward port:
+
+#   config rule
+#           option enabled '1'
+#           option target 'ACCEPT'
+#           option dest 'lan'
+#           option name 'com-diag-diminuto'
+#           option family 'ipv6'
+#           option dest_port '5555'
+#           option src 'wan6'
+ 
+################################################################################
+
 PROJECT:=roundhouse
 
 ROOT:=$(shell pwd)
