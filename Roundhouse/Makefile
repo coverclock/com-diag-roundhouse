@@ -10,6 +10,27 @@
 
 ################################################################################
 
+# R. Graziani, IPV6 FUNDAMENTALS, Cisco Press, 2013
+#
+# P. Bieringer, LINUX IPv6 HOWTO, 2015-10-16
+#
+# R. Gilligan, S. Thomson, J. Bound, J. McCann, W. Stevens, "Basic Socket
+# Interface Extentions for IPv6", RFC 3493, February 2003
+#
+# W. Stevens, M. Thomas, E. Nordmark, T. Jinmei, "Advanced Sockets
+# Applications Program Interface (API) for IPv6", RFC 3542, May 2003
+#
+# E. Davies, S. Krishnan, P. Sovola, "IPv6 Transition/Coexistence Security
+# Considerations", RFC 4942, September 2007
+#
+# T. Berners-Lee, R. Fielding, L. Masinter, "Uniform Resource Identifier
+# (URI) Syntax", RFC 3986, January 2005
+#
+# O.Li, T. Jimmel, K. Shima, IPV6 CORE PROTOCOLS IMPLEMENTATION, Morgan
+# Kaufmann, 2007
+
+################################################################################
+
 # https://github.com/raspberrypi/tools
 # https://github.com/openwrt/openwrt
 # https://downloads.openwrt.org/chaos_calmer/15.05.1/brcm2708/bcm2709/
