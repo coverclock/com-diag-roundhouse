@@ -1,6 +1,6 @@
 # com-diag-roundhouse
 
-Copyright 2016 by the Digital Aggregates Corporation, Arvada Colorado USA.
+Copyright 2016-2017 by the Digital Aggregates Corporation, Arvada Colorado USA.
 
 Licensed under the terms of the FSF GPL v2.
 
