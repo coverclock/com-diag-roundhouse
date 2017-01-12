@@ -10,6 +10,12 @@
 
 ################################################################################
 
+# make image-get
+# make overlay-clean image-clean image
+# sudo make image-load SINK=</dev/sdSOMETHING>
+
+################################################################################
+
 # R. Graziani, IPV6 FUNDAMENTALS, Cisco Press, 2013
 #
 # P. Bieringer, LINUX IPv6 HOWTO, 2015-10-16

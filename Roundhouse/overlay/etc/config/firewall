@@ -9,7 +9,7 @@ config zone
 	option name 'lan'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'REJECT'
+	option forward 'ACCEPT'
 	option network 'lan'
 
 config zone
@@ -18,19 +18,15 @@ config zone
 	option input 'ACCEPT'
 	option forward 'REJECT'
 	option network 'wan'
+	option masq '1'
 
 config zone
-	option input 'ACCEPT'
 	option forward 'REJECT'
-	option output 'ACCEPT'
 	option name 'wan6'
 	option network 'wan6'
 	option conntrack '1'
-
-config rule
-	option src 'wan'
-	option proto '41'
-	option target 'ACCEPT'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
 
 config rule
 	option name 'Allow-DHCP-Renew'
