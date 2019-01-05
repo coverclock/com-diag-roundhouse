@@ -2,20 +2,23 @@
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/coverclock)
 
+# Copyright
+
 Copyright 2016-2017 by the Digital Aggregates Corporation, Arvada Colorado USA.
 
-LICENSE
+# License
 
 Licensed under the terms of the FSF GPL v2.
 
-ABSTRACT
+# Abstract
 
-Providing IPv6 infrastructure via OpenWrt and Hurricane Electric for
-noodling around with the IPv6 implementation in Linux/GNU as used in the
-Digital Aggregates Diminuto library. See the com-diag-diminuto repo for
-more information about that.
+Roundhouse implements an IPv6 testbed  via OpenWrt, Hurricane
+Electric, and a bunch of Raspberry Pis, for experimenting with the IPv6
+implementation in Linux/GNU as implemented in the Digital Aggregates
+Diminuto library. See the com-diag-diminuto repo for more information
+about that.
 
-CONTACT
+# Contact
 
     Chip Overclock
     Digital Aggregates Corporation
@@ -24,8 +27,19 @@ CONTACT
     http://www.diag.com
     mailto:coverclock@diag.com
 
-TRADEMARKS
+# Trademarks
 
 "Digital Aggregates Corporation" is a registered trademark.
 
 "Chip Overclock" is a registered trademark.
+
+# Resources
+
+<https://coverclock.blogspot.com/2017/01/buried-treasure.html>
+
+<https://youtu.be/MKLHDWzxoZQ>
+
+<https://www.dropbox.com/s/h273z9ajjc3jxzl/Roundhouse.pdf?dl=0>
+
+<https://github.com/coverclock/com-diag-diminuto>
+
