@@ -4,7 +4,7 @@
 
 # Copyright
 
-Copyright 2016-2017 by the Digital Aggregates Corporation, Arvada Colorado USA.
+Copyright 2016-2019 by the Digital Aggregates Corporation, Arvada Colorado USA.
 
 # License
 
